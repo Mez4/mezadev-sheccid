@@ -4,9 +4,9 @@ const GridSection = () => {
   return (
     <div className='main-grid-section'>
         <div className="title-grid-section">Bellos Recuerdos</div>
-        <div className="box">caja1</div>
-        <div className="box">caja2</div>
-        <div className="box">caja3</div>
+        <div className="box">Momentos</div>
+        <div className="box">Viajes</div>
+        <div className="box">Comidita</div>
     </div>
   )
 }
