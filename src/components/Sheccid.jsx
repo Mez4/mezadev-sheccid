@@ -4,8 +4,11 @@ import React from 'react'
 //componentes
 import '../styles/const.scss'
 import '../styles/sheccid.scss'
+import '../styles/GridSection.scss'
+import GridSection from './GridSection'
 import PortadaSection from './PortadaSection'
 import Section from './Section'
+
 
 const Sheccid = () => {
   let darkBlue = {
@@ -30,6 +33,7 @@ const Sheccid = () => {
         <PortadaSection/>
       </Section>
       <Section styles={darkBlue}>
+        <GridSection/>
       </Section>
     </div>
   )

@@ -1,0 +1,39 @@
+@import 'const.scss';
+
+.main-grid-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    margin-top: 15vh;
+    border: 1px solid red;
+    flex-wrap: wrap;
+}
+.title-grid-section{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    color: $pink;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #224c70, #295a85);
+    transition: all 0.3s ease-in-out;
+    box-shadow: inset 50px 50px 66px #214a6d,
+            inset -50px -50px 66px #2b5e8b;
+}
+.box:hover{
+    box-shadow: inset 50px 50px 25px #214a6d,
+            inset -50px -50px 25px #2b5e8b;
+}
+.box:active{
+    box-shadow: inset 50px 50px 78px #0f2232,
+            inset -50px -50px 78px #3d86c6;
+}

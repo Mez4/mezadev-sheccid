@@ -9,6 +9,19 @@
     justify-content: space-around;
 
 }
+.flor-frame{
+    width: 80%;
+    height: auto;
+    position: absolute;
+    bottom: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    transform: translate(100px, 200px) rotate(-10deg);
+}
 
 .nombre {
     font-family: 'Dancing Script', cursive;
@@ -45,6 +58,7 @@
     width: 50%;
     display: flex;
     flex-wrap: nowrap;
+    z-index: 2;
 }
 
 
@@ -56,14 +70,19 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
 
     .parrafo-principal {
+        padding: 15px;
         width: 50%;
-        font-size: 0.9em;
+        font-size: 11px;
     }
 
     .banner {
-        width: 40%;
+        width: 46%;
+    }
+    .flor-frame{
+        width: 58%;
+        bottom: 60px;    
     }
 }
