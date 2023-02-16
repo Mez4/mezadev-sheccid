@@ -1,6 +1,6 @@
 @import 'const.scss';
 
-.main-grid-section{
+.main-grid-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -9,7 +9,8 @@
     border: 1px solid red;
     flex-wrap: wrap;
 }
-.title-grid-section{
+
+.title-grid-section {
     font-family: 'Dancing Script', cursive;
     font-weight: 600;
     font-size: 3em;
@@ -17,25 +18,97 @@
     text-align: center;
     color: $pink;
 }
-.box{
+
+.box {
     width: 300px;
     height: 300px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Dancing Script', cursive;
-    font-size: 2em;
     background: linear-gradient(145deg, #224c70, #295a85);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    position: relative;
     box-shadow: inset 50px 50px 66px #214a6d,
-            inset -50px -50px 66px #2b5e8b;
-}
-.box:hover{
-    box-shadow: inset 50px 50px 25px #214a6d,
+        inset -50px -50px 66px #2b5e8b;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: inset 50px 50px 25px #214a6d,
             inset -50px -50px 25px #2b5e8b;
+
+        &>.box-text {
+            font-family: 'Dancing Script', cursive;
+            color: $pink;
+        }
+
+        &>.florCorner {
+            animation: florHover 0.5s ease alternate forwards;
+        }
+    }
+
+    &:active {
+        box-shadow: inset 50px 50px 100px #193853,
+            inset -50px -50px 100px #3370a5;
+        transform: scale(0.9);
+
+        &>.box-text {
+            color: $dark-pink;
+        }
+    }
+
+    @keyframes florHover {
+        0% {
+            transform: scale(0) rotate(-70deg) translate(-60px);
+        }
+
+        30% {
+            transform: scale(-1.2) rotate(20deg) translate(-60px);
+        }
+
+        60% {
+            transform: scale(-0.8) rotate(-40deg) translate(-60px);
+        }
+
+        100% {
+            transform: scale(-1) rotate(-30deg) translate(-60px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes florHoverReverse {
+        0% {
+            transform: scale(-1) rotate(-30deg) translate(-60px);
+            opacity: 1;
+        }
+
+        30% {
+            transform: scale(-0.8) rotate(-70deg) translate(-60px);
+        }
+
+        60% {
+            transform: scale(-1.2) rotate(50deg) translate(-60px);
+        }
+
+        100% {
+            transform: scale(0) rotate(10deg) translate(-60px);
+        }
+    }
+
+    .florCorner {
+        animation: florHoverReverse 1s ease alternate forwards;
+        opacity: 0;
+        width: 120px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
-.box:active{
-    box-shadow: inset 50px 50px 78px #0f2232,
-            inset -50px -50px 78px #3d86c6;
+
+.box-text {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 2em;
+    transition: all 0.4s ease-in-out;
+    color: #fff;
 }
